@@ -6,3 +6,7 @@
 
 정할 것: 게임 이름, 팀 이름, 스토리, 엔딩, 일러스트 등
 
+[기획서 문서 편집](https://docs.google.com/document/d/1Oa6LuqIAfY8d4ngLzL4J3RK4QlHh3qfHTnl_JaA1qN8/edit?ts=5b6011ac)
+
+문성이는 이메일 주소를 몰라서 편집 권한이 없어
+
