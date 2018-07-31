@@ -12,6 +12,8 @@
 
 문성이는 이메일 주소를 몰라서 편집 권한이 없어
 
-<a href="https://assetstore.unity.com/" target="_blank">여기</a> 서 애셋도 찾아서 올려
+<a href="https://assetstore.unity.com/" target="_blank">여기</a>서 애셋도 찾아서 올려
 
-//<a href="https://drive.google.com/open?id=166MSqQqk4SX9j6uQwmg_EdqZ3t9uO85Z">기획서 다운</a> 
+<!--
+<a href="사이트 링크">글자 입력</a> 
+-->
