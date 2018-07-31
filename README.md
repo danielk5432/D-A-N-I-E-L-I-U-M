@@ -10,4 +10,4 @@
 
 문성이는 이메일 주소를 몰라서 편집 권한이 없어
 
-[여기](https://assetstore.unity.com/)서 애셋도 찾아서 올려
+[여기](target="_blank" https://assetstore.unity.com/)서 애셋도 찾아서 올려
