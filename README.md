@@ -11,8 +11,6 @@
 
 여기에는 기획안 아이디어나 프로토타입 제작하는 곳입니다.
 
-<a href="https://assetstore.unity.com/" target="_blank">유니티 애셋</a>
-
 <a href="https://newfolder.jandi.com/app/#/room/15576916">잔디 링크</a> 
 
 <a href="https://www.facebook.com/messages/t/1825519684235159">단펨 링크</a> 
@@ -21,6 +19,7 @@
 
 (참고로 폰뺏겨서 메세지나 전화는 안됨)
 
+<a href="https://assetstore.unity.com/" target="_blank">유니티 애셋</a>
 <!--
 <a href="사이트 링크">글자 입력</a> 
 -->
