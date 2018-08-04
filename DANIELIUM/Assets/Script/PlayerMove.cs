@@ -5,9 +5,11 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour {
 
 	public float speed;
-
+	Vector3 Mouse_Position;
 	private Rigidbody2D rb2d;
+	Vector2 movement;
 
+	float AngletoMouse;
 
 	// Use this for initialization
 	void Start () {
@@ -17,11 +19,24 @@ public class PlayerMove : MonoBehaviour {
 
 	void Update()
 	{
-		float moveHorizontal = Input.GetAxis("Horizontal");
-		float moveVertical = Input.GetAxis("Vertical");
-		Vector2 movement = new Vector2(moveHorizontal, moveVertical);
+		AngletoMouse = Mathf.Rad2Deg * Mathf.Atan2((Mouse_Position.y - transform.position.y), (Mouse_Position.x - transform.position.x)) - 90f;
+		Mouse_Position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		Mouse_Position.z = 0;
+		transform.rotation = Quaternion.Euler(0,0,AngletoMouse);
+		movement = new Vector2(Mathf.Sin(Mathf.Deg2Rad * AngletoMouse) * (-1), Mathf.Cos(Mathf.Deg2Rad * AngletoMouse));
 
-		rb2d.AddForce(movement * speed);
+		/*
+		if(Input.GetMouseButtonDown(0){
+
+
+
+		}*/
+
+
+	}
+	public void Playermove()
+	{
+		rb2d.AddForce(movement* speed );
 	}
 
 }

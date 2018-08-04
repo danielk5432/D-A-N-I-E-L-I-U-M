@@ -1,15 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-public class Bullet : MonoBehaviour
+
+public class Fire : MonoBehaviour
 {
 
-	public Text BulletCount;
+	
 	Queue<GameObject> Pooled_Bullet;
 	public GameObject Bullet_Template;
-	public int MAX_POOLED_BULLET = 100;
-	public float FIRE_INTERVAL = 1;//한발 발사하는데 얼마나 걸리나용
+	public int MAX_POOLED_BULLET = 300;
+	public float FIRE_INTERVAL = 0.5f;//한발 발사하는데 얼마나 걸리나용
 
 
 	private bool Is_Fire;//발사중인가요?
@@ -45,15 +45,14 @@ public class Bullet : MonoBehaviour
 				Last_Fire_Time = Time.fixedTime;
 				GameObject proj = Pooled_Bullet.Dequeue();
 				proj.SetActive(true);
-				proj.transform.position = new Vector3(-1.15f, 0);
-
-
+				proj.transform.position = transform.position;
+				GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>().Playermove();
 			}
 		}
 		//Object Counting
 		var Active_Bullet = GameObject.FindGameObjectsWithTag("Bullet");
 		Debug.Log(Active_Bullet.Length);
-		BulletCount.text = Active_Bullet.Length.ToString();
+		//BulletCount.text = Active_Bullet.Length.ToString();
 	}
 
 

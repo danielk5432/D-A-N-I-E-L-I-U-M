@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fire: MonoBehaviour
+public class Bullet: MonoBehaviour
 {
 
 	public float Speed;
 
+	private float Summon_Time;
 	// Use this for initialization
 	void Start()
 	{
@@ -31,4 +32,9 @@ public class Fire: MonoBehaviour
 	
 		transform.position = new Vector3(transform.position.x + Speed * Time.deltaTime, transform.position.y);
 	}
+	public void Time_Limit()
+	{
+		Summon_Time = Time.fixedTime;
+	}
+
 }
