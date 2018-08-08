@@ -7,13 +7,16 @@ public class Bullet: MonoBehaviour
 
 	public float Speed;
 
+
+	private float AngletoMouse;
 	private float Summon_Time;
 	// Use this for initialization
 	void Start()
 	{
-
+		PlayerMove playerposition = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove> ();
+		AngletoMouse = playerposition.AngletoMouse;
+		Summon_Time = Time.fixedTime;
 	}
-
 
 
 	private void OnTriggerEnter2D(Collider2D collision)
@@ -29,12 +32,17 @@ public class Bullet: MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-	
-		transform.position = new Vector3(transform.position.x + Speed * Time.deltaTime, transform.position.y);
+		Time_Limit();
+		transform.position = new Vector3(transform.position.x + Speed * Time.deltaTime * Mathf.Sin(Mathf.Deg2Rad * AngletoMouse), transform.position.y + Speed * Time.deltaTime * Mathf.Cos(Mathf.Deg2Rad * AngletoMouse) * (-1));
 	}
 	public void Time_Limit()
 	{
-		Summon_Time = Time.fixedTime;
+		if (Time.deltaTime - Summon_Time >= 3)
+		{
+			GameObject.FindGameObjectWithTag("Bullet");
+		}
 	}
+
+	//Vector2(Mathf.Sin(Mathf.Deg2Rad * AngletoMouse) * (-1), Mathf.Cos(Mathf.Deg2Rad * AngletoMouse))
 
 }
