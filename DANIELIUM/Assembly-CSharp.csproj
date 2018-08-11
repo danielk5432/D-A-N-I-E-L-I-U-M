@@ -62,19 +62,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\Bullet.cs" />
+    <Compile Include="Assets\Script\Enemey.cs" />
     <Compile Include="Assets\Script\Fire.cs" />
     <Compile Include="Assets\Script\PlayerMove.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/danie/Desktop/daniel/학교/동아리, 프로그래밍/새폴더/게임제작/Git Folder/DANIELIUM/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/danie/Documents/DANIELIUM/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/danie/Desktop/daniel/학교/동아리, 프로그래밍/새폴더/게임제작/Git Folder/DANIELIUM/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/danie/Documents/DANIELIUM/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/danie/Desktop/daniel/학교/동아리, 프로그래밍/새폴더/게임제작/Git Folder/DANIELIUM/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/danie/Documents/DANIELIUM/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/danie/Desktop/daniel/학교/동아리, 프로그래밍/새폴더/게임제작/Git Folder/DANIELIUM/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/danie/Documents/DANIELIUM/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
