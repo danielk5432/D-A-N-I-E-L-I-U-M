@@ -55,9 +55,10 @@
   <ItemGroup>
      <Compile Include="Assets\Script\Bullet.cs" />
      <Compile Include="Assets\Script\Enemy_Bullet_Pool.cs" />
+     <Compile Include="Assets\Script\Enemy_Pool.cs" />
      <Compile Include="Assets\Script\Enemy_Spawn.cs" />
      <Compile Include="Assets\Script\Enemy1.cs" />
-     <Compile Include="Assets\Script\Enemy1Pool.cs" />
+     <Compile Include="Assets\Script\Level_Control.cs" />
      <Compile Include="Assets\Script\Player_Fire.cs" />
      <Compile Include="Assets\Script\Player_Move.cs" />
      <Compile Include="Assets\Script\Unused\Enemey.cs" />

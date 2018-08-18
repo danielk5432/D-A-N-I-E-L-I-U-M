@@ -46,6 +46,7 @@ public class Player_Fire : MonoBehaviour
 				GameObject proj = Pooled_Bullet.Dequeue();
 				proj.SetActive(true);
 				proj.transform.position = transform.position;
+				proj.GetComponent<Bullet>().init();
 				GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Move>().Playermove();
 			}
 		}

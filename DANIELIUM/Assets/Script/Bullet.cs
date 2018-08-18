@@ -13,13 +13,17 @@ public class Bullet: MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-		Player_Move playerposition = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Move> ();
+		init();
+	}
+
+	public void init()
+	{
+		Player_Move playerposition = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Move>();
 		AngletoMouse = playerposition.AngletoMouse;
-		Summon_Time = Time.fixedTime;
 	}
 
 
-	void OnTriggerEnter2D(Collider2D other)
+		void OnTriggerEnter2D(Collider2D other)
 	{
 		//주요 기능: 자기 자신을 비활성화 한다.
 		if (other.transform.gameObject.CompareTag("BulletColider"))

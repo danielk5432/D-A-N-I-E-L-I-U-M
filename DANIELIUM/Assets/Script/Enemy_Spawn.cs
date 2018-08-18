@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy_Spawn : MonoBehaviour {
-	Enemy1Pool Enemy1;
+	Enemy_Pool Enemy1;
 	// Use this for initialization
 	void Start () {
-		Enemy1 = GameObject.FindGameObjectWithTag("Pool").GetComponent<Enemy1Pool>();
+		Enemy1 = GameObject.Find("Level Control").GetComponent<Enemy_Pool>();
 	}
 	
 	// Update is called once per frame
