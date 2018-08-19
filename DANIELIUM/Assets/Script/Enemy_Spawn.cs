@@ -19,5 +19,6 @@ public class Enemy_Spawn : MonoBehaviour {
 		GameObject proj = Enemy1.Pooled_Enemy1.Dequeue();
 		proj.SetActive(true);
 		proj.transform.position = transform.position;
+		proj.GetComponent<Enemy1>().Init();
 	}
 }

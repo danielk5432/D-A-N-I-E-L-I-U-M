@@ -212,8 +212,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bullet_Template: {fileID: 1395956961645774, guid: ed1e01dfda2172a468b1305272216a8a,
     type: 2}
-  MAX_POOLED_BULLET: 200
+  MAX_POOLED_BULLET: 100
   FIRE_INTERVAL: 0.4
+  Attack: 10
 --- !u!68 &371204874
 EdgeCollider2D:
   m_ObjectHideFlags: 0

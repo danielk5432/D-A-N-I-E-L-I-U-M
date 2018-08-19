@@ -4,9 +4,27 @@ using UnityEngine;
 
 public class Level_Control : MonoBehaviour {
 
+	Enemy_Spawn Spawn1;
+	Enemy_Spawn Spawn2;
+	Enemy_Spawn Spawn3;
+	Enemy_Spawn Spawn4;
+	Enemy_Spawn Spawn5;
+	Enemy_Spawn Spawn6;
+	Enemy_Spawn Spawn7;
+	Enemy_Spawn Spawn8;
+
+
 	// Use this for initialization
 	void Start () {
-		Test_Level();
+		Spawn1 = GameObject.Find("Enemy Spawn1").GetComponent<Enemy_Spawn>();
+		Spawn2 = GameObject.Find("Enemy Spawn2").GetComponent<Enemy_Spawn>();
+		Spawn3 = GameObject.Find("Enemy Spawn3").GetComponent<Enemy_Spawn>();
+		Spawn4 = GameObject.Find("Enemy Spawn4").GetComponent<Enemy_Spawn>();
+		Spawn5 = GameObject.Find("Enemy Spawn5").GetComponent<Enemy_Spawn>();
+		Spawn6 = GameObject.Find("Enemy Spawn6").GetComponent<Enemy_Spawn>();
+		Spawn7 = GameObject.Find("Enemy Spawn7").GetComponent<Enemy_Spawn>();
+		Spawn8 = GameObject.Find("Enemy Spawn8").GetComponent<Enemy_Spawn>();
+		StartCoroutine(Test_Level());
 	}
 	
 	// Update is called once per frame
@@ -19,9 +37,13 @@ public class Level_Control : MonoBehaviour {
 
 	}
 
-	void Test_Level()
+	IEnumerator Test_Level()
 	{
-		GameObject.Find("Enemy Spawn1").GetComponent<Enemy_Spawn>().Enemy1Spawn();
+		Spawn1.Enemy1Spawn();
+		Spawn8.Enemy1Spawn();
+		yield return new WaitForSeconds(3);
+		Spawn1.Enemy1Spawn();
+		Spawn8.Enemy1Spawn();
 	}
 
 }

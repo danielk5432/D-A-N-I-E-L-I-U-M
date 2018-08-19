@@ -10,6 +10,7 @@ public class Player_Fire : MonoBehaviour
 	public GameObject Bullet_Template;
 	public int MAX_POOLED_BULLET = 300;
 	public float FIRE_INTERVAL = 0.5f;//한발 발사하는데 얼마나 걸리나용
+	public float Attack = 10;
 
 
 	private bool Is_Fire;//발사중인가요?

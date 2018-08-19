@@ -42,7 +42,7 @@ public class Enemy_Pool : MonoBehaviour
 		}
 	}
 
-	public void Enemy_Reload(GameObject Enemy)
+	public void Enemy1_Reload(GameObject Enemy)
 	{
 		//Bullet 오브젝트가 충돌하면 그 오브젝트에서 이 함수를 호출한다.(스크립트 외부에서 호출한다)
 		//이 함수를 호출할 때 인자로써는 Script가 붙어있는 GameObject를 전달한다.
