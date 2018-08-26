@@ -40,10 +40,11 @@ public class Level_Control : MonoBehaviour {
 	IEnumerator Test_Level()
 	{
 		Spawn1.Enemy1Spawn();
-		Spawn8.Enemy1Spawn();
+		Spawn2.Enemy1Spawn();
+		Spawn3.Enemy1Spawn();
+		Spawn4.Enemy1Spawn();
+		Spawn8.Enemy2Spawn();
 		yield return new WaitForSeconds(3);
-		Spawn1.Enemy1Spawn();
-		Spawn8.Enemy1Spawn();
 	}
 
 }

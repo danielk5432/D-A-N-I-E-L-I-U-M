@@ -9,7 +9,6 @@ public class Bullet: MonoBehaviour
 
 
 	private float AngletoMouse;
-	private float Summon_Time;
 	// Use this for initialization
 	void Start()
 	{

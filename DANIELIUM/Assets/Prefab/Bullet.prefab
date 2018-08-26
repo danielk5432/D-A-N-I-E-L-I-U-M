@@ -20,10 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4615961888447212}
   - component: {fileID: 212813871465011394}
-  - component: {fileID: 114122591393881828}
   - component: {fileID: 58109974471791458}
+  - component: {fileID: 114122591393881828}
   - component: {fileID: 50812660507754014}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: Bullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1395956961645774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.62, y: -1.05, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.7}
   m_Children: []
   m_Father: {fileID: 0}
@@ -122,8 +122,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1909886875
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3eed2f2eb91dd2147b003ceaace05617, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

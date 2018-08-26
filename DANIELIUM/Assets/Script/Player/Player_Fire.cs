@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Player_Fire : MonoBehaviour
 {
-
 	
 	Queue<GameObject> Pooled_Bullet;
 	public GameObject Bullet_Template;

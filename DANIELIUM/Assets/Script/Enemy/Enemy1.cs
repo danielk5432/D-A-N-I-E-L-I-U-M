@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy1 : MonoBehaviour {
 
+	Enemy_Bullet_Pool EFire;
 	public float HEALTH_MAXIMUM = 25;
 	public int Speed = 4;
 	public bool Alive = false;
@@ -13,6 +14,10 @@ public class Enemy1 : MonoBehaviour {
 	private Vector3 PlaceToGo;
 	private float AngleToPlace;
 
+	void Start()
+	{
+		EFire = GameObject.Find("Level Control").GetComponent<Enemy_Bullet_Pool>();
+	}
 
 	// Use this for initialization
 	public void Init () {
@@ -59,13 +64,10 @@ public class Enemy1 : MonoBehaviour {
 		while (Alive)
 		{
 			//총알 발사 스크립트 작성
+			EFire.EFire1(transform.position);
 
-			float a = Random.Range(0f, 0.5f);
-			yield return new WaitForSeconds(3 + a);
-			
-			/*if(비활성화)
-			  {break;}
-			  아니면 while문 바꾸기*/
+			float a = Random.Range(0.0f, 4.0f);
+			yield return new WaitForSeconds(4 + a);
 		}
 	}
 
@@ -76,19 +78,15 @@ public class Enemy1 : MonoBehaviour {
 			//움직이는 것 스크립트 작성
 			PlaceToGo = new Vector3(Random.Range(10f, -10f), Random.Range(5f, -5f));
 
-			Debug.Log(PlaceToGo);
+			//Debug.Log(PlaceToGo);
 
 			AngleToPlace = Mathf.Rad2Deg * Mathf.Atan2((PlaceToGo.y - transform.position.y), (PlaceToGo.x - transform.position.x));
 			//AngletoMouse = Mathf.Rad2Deg * Mathf.Atan2((Mouse_Position.y - transform.position.y), (Mouse_Position.x - transform.position.x)) - 90f;
 
-			Debug.Log(AngleToPlace);
-
+			//Debug.Log(AngleToPlace);
 
 			float a = Random.Range(-0.5f, 0.5f);
 			yield return new WaitForSeconds(4 + a);
-			/*if(비활성화)
-				  {break;}
-			아니면 while문 바꾸기*/
 		}
 	}
 

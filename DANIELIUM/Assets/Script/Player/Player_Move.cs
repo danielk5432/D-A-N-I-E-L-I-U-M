@@ -37,8 +37,15 @@ public class Player_Move : MonoBehaviour {
 	}
 	public void Playermove()
 	{
-		rb2d.AddForce(movement* speed );
+		rb2d.AddForce(movement* speed);
 	}
 
-
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		//주요 기능: 자기 자신을 비활성화 한다.
+		if (other.transform.gameObject.CompareTag("Enemy") || other.transform.gameObject.CompareTag("Enemy Bullet"))
+		{
+			gameObject.SetActive(false);
+		}
+	}
 }
