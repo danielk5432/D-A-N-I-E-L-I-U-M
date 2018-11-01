@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Level_Control : MonoBehaviour {
 
+
+	public bool Alive = false;
+
+
 	Enemy_Spawn Spawn1;
 	Enemy_Spawn Spawn2;
 	Enemy_Spawn Spawn3;
@@ -43,8 +47,10 @@ public class Level_Control : MonoBehaviour {
 		Spawn2.Enemy1Spawn();
 		Spawn3.Enemy1Spawn();
 		Spawn4.Enemy1Spawn();
-		Spawn8.Enemy2Spawn();
+		Spawn5.Enemy1Spawn();
+		Spawn6.Enemy1Spawn();
+		Spawn7.Enemy1Spawn();
+		Spawn8.Enemy1Spawn();
 		yield return new WaitForSeconds(3);
 	}
-
 }

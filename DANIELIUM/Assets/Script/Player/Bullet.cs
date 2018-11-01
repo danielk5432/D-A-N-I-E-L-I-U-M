@@ -6,6 +6,7 @@ public class Bullet: MonoBehaviour
 {
 
 	public float Speed;
+	Level_Control level;
 
 
 	private float AngletoMouse;
@@ -13,6 +14,7 @@ public class Bullet: MonoBehaviour
 	void Start()
 	{
 		init();
+		level = GameObject.Find("Level Control").GetComponent<Level_Control>();
 	}
 
 	public void init()
@@ -39,6 +41,10 @@ public class Bullet: MonoBehaviour
 	{
 		//Time_Limit();
 		transform.position = new Vector3(transform.position.x + Speed * Time.deltaTime * Mathf.Sin(Mathf.Deg2Rad * AngletoMouse), transform.position.y + Speed * Time.deltaTime * Mathf.Cos(Mathf.Deg2Rad * AngletoMouse) * (-1));
+		if (!level.Alive)
+		{
+			GameObject.Find("Player").GetComponent<Player_Fire>().Bullet_Reload(gameObject);
+		}
 	}
 	/*
 	public void Time_Limit()

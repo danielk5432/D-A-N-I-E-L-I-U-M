@@ -29,7 +29,10 @@ public class Enemy1 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		if (!GameObject.Find("Level Control").GetComponent<Level_Control>().Alive)
+		{
+			gameObject.SetActive(false);
+		}
 		if (Alive)
 		{
 			//transform.position = new Vector3(transform.position.x + Speed * Time.deltaTime * Mathf.Sin(Mathf.Deg2Rad * AngletoMouse), transform.position.y + Speed * Time.deltaTime * Mathf.Cos(Mathf.Deg2Rad * AngletoMouse) * (-1));
@@ -76,7 +79,7 @@ public class Enemy1 : MonoBehaviour {
 		while (Alive)
 		{
 			//움직이는 것 스크립트 작성
-			PlaceToGo = new Vector3(Random.Range(10f, -10f), Random.Range(5f, -5f));
+			PlaceToGo = new Vector3(Random.Range(9f, -9f), Random.Range(5f, -5f));
 
 			//Debug.Log(PlaceToGo);
 

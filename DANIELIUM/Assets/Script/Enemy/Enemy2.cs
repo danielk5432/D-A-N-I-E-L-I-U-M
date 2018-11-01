@@ -13,7 +13,6 @@ public class Enemy2 : MonoBehaviour {
 	private float health;
 	private Vector3 PlaceToGo;
 	private float AngleToPlace;
-	private float rotate;
 	private bool dash = false;
 	private float ATP;
 
@@ -29,13 +28,7 @@ public class Enemy2 : MonoBehaviour {
 		{
 			if (!dash)
 			{
-				transform.Rotate(0, 0, ATP - transform.rotation.eulerAngles.z);
-			}
-			rotate += Input.GetAxis("Horizontal");
-			transform.eulerAngles = new Vector3(0, rotate, 0);
-			if (rotate <= 70)
-			{
-				rotate += 1;
+				transform.Rotate(0, 0, ATP + 90);
 			}
 			if (Mathf.Pow(PlaceToGo.y - transform.position.y, 2) + Mathf.Pow(PlaceToGo.x - transform.position.x, 2) >= Mathf.Pow(Speed, 2))
 			{ transform.position = new Vector3(transform.position.x + Speed * Time.deltaTime * Mathf.Cos(Mathf.Deg2Rad * AngleToPlace), transform.position.y + Speed * Time.deltaTime * Mathf.Sin(Mathf.Deg2Rad * AngleToPlace)); }
@@ -53,7 +46,6 @@ public class Enemy2 : MonoBehaviour {
 		health = HEALTH_MAXIMUM;
 		dash = false;
 		StartCoroutine(Move());
-		rotate = 4;
 		Speed = 2;
 		Alive = true;
 	}
@@ -63,7 +55,7 @@ public class Enemy2 : MonoBehaviour {
 		PlaceToGo = GameObject.Find("Player").transform.position;
 		AngleToPlace = ATP;
 		yield return new WaitForSeconds(2 + Random.Range(-0.1f, 3));
-		Speed = 7;
+		Speed = 20;
 		dash = true;
 		PlaceToGo = GameObject.Find("Player").transform.position;
 		AngleToPlace = ATP + Random.Range(-15f, 15f);

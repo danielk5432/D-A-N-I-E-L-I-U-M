@@ -5,15 +5,20 @@ using UnityEngine;
 public class Player_Move : MonoBehaviour {
 
 	public float speed;
-	Vector3 Mouse_Position;
-	private Rigidbody2D rb2d;
-	Vector2 movement;
-
 	public float AngletoMouse;
+
+	Level_Control level;
+	Vector2 movement;
+	Vector3 Mouse_Position;
+
+	private Rigidbody2D rb2d;
+
 
 	// Use this for initialization
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D>();
+		level = GameObject.Find("Level Control").GetComponent<Level_Control>();
+		level.Alive = true;
 		//rb2d 값에 물리엔진을 대입
 	}
 	
@@ -27,14 +32,13 @@ public class Player_Move : MonoBehaviour {
 		Mouse_Position.z = 0;
 		transform.rotation = Quaternion.Euler(0,0,AngletoMouse);
 		movement = new Vector2(Mathf.Sin(Mathf.Deg2Rad * AngletoMouse) * (-1), Mathf.Cos(Mathf.Deg2Rad * AngletoMouse));
-
-		/*
-		if(Input.GetMouseButtonDown(0){
-
+			/*
+			if(Input.GetMouseButtonDown(0){
 
 
-		}*/
-	}
+
+			}*/
+		}
 	public void Playermove()
 	{
 		rb2d.AddForce(movement* speed);
@@ -45,7 +49,22 @@ public class Player_Move : MonoBehaviour {
 		//주요 기능: 자기 자신을 비활성화 한다.
 		if (other.transform.gameObject.CompareTag("Enemy") || other.transform.gameObject.CompareTag("Enemy Bullet"))
 		{
-			gameObject.SetActive(false);
+			// 죽는 모션 추가하기
+
+			level.Alive = false;
+			StartCoroutine(Dead());
 		}
+	}
+
+	IEnumerator Dead() {
+		yield return 0;
+		gameObject.SetActive(false);
+	}
+
+	void TransformReset()
+	{
+		Vector3 a = new Vector3(0, 0, 0);
+		gameObject.transform.Rotate(a);
+		gameObject.transform.position = a;
 	}
 }
