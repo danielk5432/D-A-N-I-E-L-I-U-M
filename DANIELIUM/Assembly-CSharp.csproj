@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Script\Enemy\Enemy_Bullet.cs" />
     <Compile Include="Assets\Script\Enemy\Enemy_Bullet_Pool.cs" />
+    <Compile Include="Assets\Script\Enemy\Enemy_Count.cs" />
     <Compile Include="Assets\Script\Enemy\Enemy_Fire.cs" />
     <Compile Include="Assets\Script\Enemy\Enemy_Pool.cs" />
     <Compile Include="Assets\Script\Enemy\Enemy_Spawn.cs" />
@@ -70,12 +71,29 @@
     <Compile Include="Assets\Script\Enemy\Enemy2.cs" />
     <Compile Include="Assets\Script\Level_Control.cs" />
     <Compile Include="Assets\Script\Player\Bullet.cs" />
+    <Compile Include="Assets\Script\Player\Player_Dash.cs" />
     <Compile Include="Assets\Script\Player\Player_Fire.cs" />
     <Compile Include="Assets\Script\Player\Player_Move.cs" />
+    <Compile Include="Assets\Script\ScoreGUI.cs" />
+    <Compile Include="Assets\Script\StartButton.cs" />
     <Compile Include="Assets\Script\Unused\CamaraController.cs" />
     <Compile Include="Assets\Script\Unused\Enemey.cs" />
     <Compile Include="Assets\Script\Unused\Fire.cs" />
     <Compile Include="Assets\Script\Unused\PlayerMove.cs" />
+    <Compile Include="Assets\Scripts\ActiveStateToggler.cs" />
+    <Compile Include="Assets\Scripts\ApplicationManager.cs" />
+    <Compile Include="Assets\Scripts\ChangeColor.cs" />
+    <Compile Include="Assets\Scripts\DragMe.cs" />
+    <Compile Include="Assets\Scripts\DragPanel.cs" />
+    <Compile Include="Assets\Scripts\DropMe.cs" />
+    <Compile Include="Assets\Scripts\PanelManager.cs" />
+    <Compile Include="Assets\Scripts\ResizePanel.cs" />
+    <Compile Include="Assets\Scripts\ScrollDetailTexture.cs" />
+    <Compile Include="Assets\Scripts\ShowSliderValue.cs" />
+    <Compile Include="Assets\Scripts\TiltWindow.cs" />
+    <None Include="Assets\Fonts\Jupiter\LICENSE.txt" />
+    <None Include="Assets\Textures and Sprites\SF UI\Background\LICENSE.txt" />
+    <None Include="Assets\Materials\UI-Default-No-Alpha.shader" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/danie/Desktop/daniel/학교/동아리, 프로그래밍/새폴더/게임제작/Git Folder/DANIELIUM/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

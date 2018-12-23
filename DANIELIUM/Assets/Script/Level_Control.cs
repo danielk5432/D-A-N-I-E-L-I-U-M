@@ -6,7 +6,7 @@ public class Level_Control : MonoBehaviour {
 
 
 	public bool Alive = false;
-
+	public int[] ECount = new int[10] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
 	Enemy_Spawn Spawn1;
 	Enemy_Spawn Spawn2;
@@ -29,6 +29,7 @@ public class Level_Control : MonoBehaviour {
 		Spawn7 = GameObject.Find("Enemy Spawn7").GetComponent<Enemy_Spawn>();
 		Spawn8 = GameObject.Find("Enemy Spawn8").GetComponent<Enemy_Spawn>();
 		StartCoroutine(Test_Level());
+
 	}
 	
 	// Update is called once per frame
@@ -43,14 +44,18 @@ public class Level_Control : MonoBehaviour {
 
 	IEnumerator Test_Level()
 	{
-		Spawn1.Enemy1Spawn();
-		Spawn2.Enemy1Spawn();
-		Spawn3.Enemy1Spawn();
-		Spawn4.Enemy1Spawn();
-		Spawn5.Enemy1Spawn();
-		Spawn6.Enemy1Spawn();
-		Spawn7.Enemy1Spawn();
-		Spawn8.Enemy1Spawn();
-		yield return new WaitForSeconds(3);
+		while (true)
+		{
+			Spawn1.Enemy1Spawn();
+			Spawn2.Enemy1Spawn();
+			Spawn3.Enemy1Spawn();
+			Spawn4.Enemy1Spawn();
+			Spawn5.Enemy1Spawn();
+			Spawn6.Enemy1Spawn();
+			Spawn7.Enemy1Spawn();
+			Spawn8.Enemy1Spawn();
+			yield return new WaitForSeconds(3);
+			Debug.Log(ECount[0]);
+		}
 	}
 }

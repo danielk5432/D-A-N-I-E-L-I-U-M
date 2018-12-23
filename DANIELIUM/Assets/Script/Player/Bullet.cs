@@ -41,6 +41,7 @@ public class Bullet: MonoBehaviour
 	{
 		//Time_Limit();
 		transform.position = new Vector3(transform.position.x + Speed * Time.deltaTime * Mathf.Sin(Mathf.Deg2Rad * AngletoMouse), transform.position.y + Speed * Time.deltaTime * Mathf.Cos(Mathf.Deg2Rad * AngletoMouse) * (-1));
+		//transform.position = new Vector3(transform.position.x + Speed * Time.deltaTime * Mathf.Sin(Mathf.Deg2Rad * AngletoMouse), transform.position.y + Speed * Time.deltaTime * Mathf.Cos(Mathf.Deg2Rad * AngletoMouse) * (-1));
 		if (!level.Alive)
 		{
 			GameObject.Find("Player").GetComponent<Player_Fire>().Bullet_Reload(gameObject);

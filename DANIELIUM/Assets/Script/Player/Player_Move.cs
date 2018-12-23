@@ -47,18 +47,18 @@ public class Player_Move : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		//주요 기능: 자기 자신을 비활성화 한다.
-		if (other.transform.gameObject.CompareTag("Enemy") || other.transform.gameObject.CompareTag("Enemy Bullet"))
+		if (other.transform.gameObject.CompareTag("Enemy Bullet"))
 		{
 			// 죽는 모션 추가하기
 
-			level.Alive = false;
+			
 			StartCoroutine(Dead());
 		}
 	}
 
 	IEnumerator Dead() {
+		level.Alive = false;
 		yield return 0;
-		gameObject.SetActive(false);
 	}
 
 	void TransformReset()

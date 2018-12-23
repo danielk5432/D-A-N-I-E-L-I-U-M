@@ -11,6 +11,8 @@ public class Enemy_Pool : MonoBehaviour
 	public GameObject Enemy1_Template;
 	public GameObject Enemy2_Template;
 	public int MAX_POOLED_ENEMY1 = 15;
+	Level_Control Count;
+
 
 	// Use this for initialization
 	void Start() 
@@ -18,6 +20,7 @@ public class Enemy_Pool : MonoBehaviour
 		Pooled_Enemy1 = new Queue<GameObject>(MAX_POOLED_ENEMY1);
 		Pooled_Enemy2 = new Queue<GameObject>(MAX_POOLED_ENEMY1);
 		Enemy_Load();
+		Count = GameObject.Find("Level Control").GetComponent<Level_Control>();
 	}
 
 	// Update is called once per frame
@@ -52,11 +55,13 @@ public class Enemy_Pool : MonoBehaviour
 	{
 		Enemy.SetActive(false);
 		Pooled_Enemy1.Enqueue(Enemy);
+		Count.ECount[0]--;
 	}
 
 	public void Enemy2_Reload(GameObject Enemy)
 	{
 		Enemy.SetActive(false);
 		Pooled_Enemy2.Enqueue(Enemy);
+		Count.ECount[1]--;
 	}
 }
