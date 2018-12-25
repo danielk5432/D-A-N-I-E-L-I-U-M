@@ -43,10 +43,13 @@ public class Player_Fire : MonoBehaviour
 			{
 				Last_Fire_Time = Time.fixedTime;
 				GameObject proj = Pooled_Bullet.Dequeue();
-				proj.SetActive(true);
-				proj.transform.position = transform.position;
-				proj.GetComponent<Bullet>().init();
-				GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Move>().Playermove();
+				if (proj != null)
+				{
+					proj.SetActive(true);
+					proj.transform.position = transform.position;
+					proj.GetComponent<Bullet>().init();
+					GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Move>().Playermove();
+				}
 			}
 		}
 		//Object Counting

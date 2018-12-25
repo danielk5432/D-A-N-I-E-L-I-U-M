@@ -4,11 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - BulletColider
   - Bullet
   - Enemy Bullet
   - Enemy
   - Wipe
+  - BulletCollider
+  - EnemyCollider
+  - PlayerCollider
   layers:
   - Default
   - TransparentFX

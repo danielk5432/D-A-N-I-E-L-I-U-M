@@ -6,19 +6,23 @@ public class Player_Move : MonoBehaviour {
 
 	public float speed;
 	public float AngletoMouse;
+	public int score;
 
 	Level_Control level;
 	Vector2 movement;
 	Vector3 Mouse_Position;
+	ScoreGUI Score;
 
 	private Rigidbody2D rb2d;
 
 
 	// Use this for initialization
 	void Start () {
+		DontDestroyOnLoad(transform.gameObject);
 		rb2d = GetComponent<Rigidbody2D>();
 		level = GameObject.Find("Level Control").GetComponent<Level_Control>();
 		level.Alive = true;
+		Score = GameObject.Find("ScoreGUI").GetComponent<ScoreGUI>();
 		//rb2d 값에 물리엔진을 대입
 	}
 	
@@ -32,6 +36,8 @@ public class Player_Move : MonoBehaviour {
 		Mouse_Position.z = 0;
 		transform.rotation = Quaternion.Euler(0,0,AngletoMouse);
 		movement = new Vector2(Mathf.Sin(Mathf.Deg2Rad * AngletoMouse) * (-1), Mathf.Cos(Mathf.Deg2Rad * AngletoMouse));
+		if(Score != null)
+			score = Score.score;
 			/*
 			if(Input.GetMouseButtonDown(0){
 
@@ -67,4 +73,5 @@ public class Player_Move : MonoBehaviour {
 		gameObject.transform.Rotate(a);
 		gameObject.transform.position = a;
 	}
+
 }

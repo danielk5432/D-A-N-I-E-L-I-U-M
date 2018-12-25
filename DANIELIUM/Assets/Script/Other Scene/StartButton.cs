@@ -9,4 +9,8 @@ public class StartButton : MonoBehaviour {
 	{
 		SceneManager.LoadScene("TestScene");
 	}
+	public void OnClickQuit()
+	{
+		Application.Quit();
+	}
 }

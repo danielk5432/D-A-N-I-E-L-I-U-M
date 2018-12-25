@@ -31,7 +31,7 @@ public class Enemy_Bullet : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		//주요 기능: 자기 자신을 비활성화 한다.
-		if (other.transform.gameObject.CompareTag("BulletColider") || other.transform.gameObject.CompareTag("Player"))
+		if (other.transform.gameObject.CompareTag("BulletCollider") || other.transform.gameObject.CompareTag("Player"))
 		{
 			GameObject.Find("Level Control").GetComponent<Enemy_Bullet_Pool>().Enemy1_Reload(gameObject);
 			speed = 0;

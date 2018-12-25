@@ -35,4 +35,12 @@ public class Enemy_Spawn : MonoBehaviour {
 		proj.GetComponent<Enemy2>().Init();
 		Count.ECount[1]++;
 	}
+	public void Enemy3Spawn()
+	{
+		GameObject proj = Enemy.Pooled_Enemy3.Dequeue();
+		proj.SetActive(true);
+		proj.transform.position = transform.position;
+		proj.GetComponent<Enemy3>().Init();
+		Count.ECount[2]++;
+	}
 }
